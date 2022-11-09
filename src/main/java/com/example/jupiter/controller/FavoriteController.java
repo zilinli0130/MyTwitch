@@ -45,38 +45,35 @@ public class FavoriteController {
 
     @RequestMapping(value = "/favorite", method = RequestMethod.POST)
     public void setFavoriteItem(@RequestBody FavoriteRequestBody requestBody, HttpServletRequest request, HttpServletResponse response) {
-//        HttpSession session = request.getSession(false);
-//        if (session == null) {
-//            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-//            return ;
-//        }
-//        String userId = (String) session.getAttribute("user_id");
-        String userId = "5678";
+        HttpSession session = request.getSession(false);
+        if (session == null) {
+            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+            return ;
+        }
+        String userId = (String) session.getAttribute("user_id");
         favoriteService.setFavoriteItem(userId, requestBody.getFavoriteItem());
     }
 
     @RequestMapping(value = "/favorite", method = RequestMethod.DELETE)
     public void unsetFavoriteItem(@RequestBody FavoriteRequestBody requestBody, HttpServletRequest request, HttpServletResponse response) {
-//        HttpSession session = request.getSession(false);
-//        if (session == null) {
-//            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-//            return;
-//        }
-//        String userId = (String) session.getAttribute("user_id");
-        String userId = "5678";
+        HttpSession session = request.getSession(false);
+        if (session == null) {
+            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+            return;
+        }
+        String userId = (String) session.getAttribute("user_id");
         favoriteService.unsetFavoriteItem(userId, requestBody.getFavoriteItem().getId());
     }
 
     @RequestMapping(value = "/favorite", method = RequestMethod.GET)
     @ResponseBody
     public Map<String, List<Item>> getFavoriteItem(HttpServletRequest request, HttpServletResponse response) {
-//        HttpSession session = request.getSession(false);
-//        if (session == null) {
-//            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
-//            return new HashMap<>();
-//        }
-//        String userId = (String) session.getAttribute("user_id");
-        String userId = "5678";
+        HttpSession session = request.getSession(false);
+        if (session == null) {
+            response.setStatus(HttpServletResponse.SC_FORBIDDEN);
+            return new HashMap<>();
+        }
+        String userId = (String) session.getAttribute("user_id");
         return favoriteService.getFavoriteItems(userId);
     }
 }
