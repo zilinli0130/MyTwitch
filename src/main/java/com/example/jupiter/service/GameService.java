@@ -200,7 +200,7 @@ public class GameService {
         return videos;
     }
 
-    private List<Item> SearchByItemType(String gameId, ItemType type, int limit) throws TwitchException {
+    public List<Item> SearchByItemType(String gameId, ItemType type, int limit) throws TwitchException {
 
         List<Item> items = Collections.emptyList();
         switch (type) {
