@@ -40,9 +40,6 @@ public class FavoriteController {
 // * Public methods
 //**********************************************************************************************************************
 
-    @Autowired
-    private FavoriteService favoriteService;
-
     @RequestMapping(value = "/favorite", method = RequestMethod.POST)
     public void setFavoriteItem(@RequestBody FavoriteRequestBody requestBody, HttpServletRequest request, HttpServletResponse response) {
         HttpSession session = request.getSession(false);
@@ -76,5 +73,12 @@ public class FavoriteController {
         String userId = (String) session.getAttribute("user_id");
         return favoriteService.getFavoriteItems(userId);
     }
+
+//**********************************************************************************************************************
+// * Private Attributes
+//**********************************************************************************************************************
+
+    @Autowired
+    private FavoriteService favoriteService;
 }
 
