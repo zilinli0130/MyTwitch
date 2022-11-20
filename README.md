@@ -1,4 +1,4 @@
-# twitch_item_recommendation_project
+# twitch_game_item_recommendation_project
 
 ### *Introduction*
 
