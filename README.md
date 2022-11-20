@@ -7,6 +7,7 @@ User can search games, save favorited game items in a container or delete the fa
 
 `Website link`: http://3.16.112.94/
 
+---
 
 ### *Developer Environment*
 
@@ -15,6 +16,7 @@ I use the `JSX` (an extension to Javascript) which is more developer-friendly wa
 In `package.json` file, I include `"proxy": "http://localhost:8080"`. In such way, any broswer request `"http://localhost:3000/<request api>"` will be sent
 to proxy server and convert it to `"http://localhost:8080/<request api>"` which is redirected to the backend server. After the front end code is deployed to a remote server, we don't need the proxy since it does not being restricted by the same-origin policy from browser.
 
+---
 
 ### *Frontend Software Architecture*
 
@@ -23,6 +25,8 @@ to proxy server and convert it to `"http://localhost:8080/<request api>"` which 
 Figure 1. Frontend software architecture design process flow (click the diagram to view in a larger view)
 
 The above diagram shows the relationship between different Javascript components (refer as JS component for short). The main component is `App` which consists of 3 modules (`Slider`, `Page Header` and `Home`). 
+
+---
 
 ### *Frontend Software Components*
 
@@ -40,11 +44,15 @@ favorite item history and display them on `Home` component in 3 tabs: video, cli
 
 The `Home` component is the main spot to display/render any information pulled from backend server through user interaction with other GUI components.
 
+---
+
 ### *Backend Software Architecture*
 
 ![backend_software_architecture](images/software_architecture_backend.PNG)
 
 Figure 2. Backend software architecture design process flow (click the diagram to view in a larger view)
+
+---
 
 ### *Backend Software Components*
 
@@ -83,6 +91,8 @@ Figure 2. Backend software architecture design process flow (click the diagram t
         save to the result
  
    ```
+---
+
 ### *Database*
 
 The selected database is relational database (AWS-SQL), since it can clearly relates the user information and game items. The relation mapping is many-to-many, since one user can favor multiple items and one item can be favored by multiple users. The attached shema shows the relationship below:
@@ -92,6 +102,8 @@ The selected database is relational database (AWS-SQL), since it can clearly rel
 Figure 3. RDBMS schema (user, item, favorite item) 
 
 In order to make the database query more conveniently, I use the Hibernate to achieve the object relation mapping (ORM) idea (object oriented way to interact with database) so that I can only write Java code to interact with the database rather than using the SQL language directly. 
+ 
+ ---
  
 ### *Deployment*
 
