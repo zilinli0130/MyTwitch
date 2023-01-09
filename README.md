@@ -48,7 +48,7 @@ The `Home` component is the main spot to display/render any information pulled f
 
 ### *Backend Software Architecture*
 
-![backend_software_architecture](images/software_architecture_backend.PNG)
+![backend_software_architecture](images/backend_architecture.PNG)
 
 Figure 2. Backend software architecture design process flow (click the diagram to view in a larger view)
 
