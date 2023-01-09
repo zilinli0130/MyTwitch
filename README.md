@@ -1,8 +1,8 @@
-# twitch_game_item_recommendation_project
+# Twitch Game Item Recommendation Web Application
 
 ### *Introduction*
 
-The main goal for this project is to develop efficient and user-friendly game recommendation solution as a web application to users based on the user favorite item history.
+The main goal for this project is to develop efficient and user-friendly game recommendation solution (content-based) as a web application to users based on the user favorite item history.
 User can search games, save favorited game items in a container or delete the favorited game items. The game information requesting from my backend server is based on Twitch APIs. 
 
 `Website link`: http://3.16.112.94/
