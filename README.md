@@ -5,7 +5,7 @@
 The main goal for this project is to develop efficient and user-friendly game recommendation solution (content-based) as a web application to users based on the user favorite item history.
 User can search games, save favorited game items in a container or delete the favorited game items. The game information requesting from my backend server is based on Twitch APIs. 
 
-`Website link`: http://3.16.112.94/
+#### Demo Link: https://drive.google.com/file/d/1Y-GURnYQUqjqhKfi4A2nPqw5wWv-BUMx/view?usp=drive_link
 
 ---
 
