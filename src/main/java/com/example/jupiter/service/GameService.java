@@ -227,7 +227,7 @@ public class GameService {
 //**********************************************************************************************************************
     private static final int DEFAULT_GAME_LIMIT = 20;
     private static final int DEFAULT_SEARCH_LIMIT = 20;
-    private static final String TOKEN = "Bearer qr9xa03hsso466cs7jt3vw2yln4dbn";
+    private static final String TOKEN = "Bearer qrp6guc8enkfv4llimxb5n9z1l40jy";
     private static final String CLIENT_ID = "odgp5sp63c87qtvjqdeb06bq0i8950";
     private static final String TWITCH_BASE_URL = "https://www.twitch.tv/";
     private static final String TOP_GAME_URL = "https://api.twitch.tv/helix/games/top?first=%s";

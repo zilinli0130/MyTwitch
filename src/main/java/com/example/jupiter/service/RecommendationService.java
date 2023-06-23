@@ -16,7 +16,6 @@ import com.example.jupiter.dao.FavoriteDao;
 import com.example.jupiter.entity.db.Item;
 import com.example.jupiter.entity.db.ItemType;
 import com.example.jupiter.entity.response.Game;
-import com.example.jupiter.service.GameService;
 
 // Framework includes
 import org.springframework.beans.factory.annotation.Autowired;

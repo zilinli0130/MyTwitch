@@ -115,6 +115,20 @@ public class FavoriteDao {
         return itemMap;
     }
 
+    public Map<String, List<String>> getFavoriteGameIds(String userId) {
+
+        Map<String, List<String>> itemMap = new HashMap<>();
+        for (ItemType type : ItemType.values()) {
+            itemMap.put(type.toString(), new ArrayList<>());
+        }
+
+        Set<Item> items = this.getFavoriteItems(userId);
+        for (Item item : items) {
+            itemMap.get(item.getType().toString()).add(item.getGameId());
+        }
+        return itemMap;
+    }
+
 //**********************************************************************************************************************
 // * Private attributes
 //**********************************************************************************************************************
