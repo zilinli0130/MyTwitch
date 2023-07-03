@@ -1,4 +1,4 @@
-# Twitch Game Item Recommendation Web Application
+# MyTwitch: Game Item Recommendation Web Application
 
 ### *Introduction*
 
